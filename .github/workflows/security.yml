@@ -6,7 +6,7 @@ on:
   schedule:
     - cron: "33 8 * * 6"
   push:
-    branches: [main]
+    branches: [embedded]
 
 permissions: read-all
 
