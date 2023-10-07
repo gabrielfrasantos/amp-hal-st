@@ -4,6 +4,57 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/) and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [3.0.0](https://github.com/gabrielfrasantos/embedded-hal-st/compare/v2.0.0...v3.0.0) (2023-10-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* update ST hal drivers ([#102](https://github.com/gabrielfrasantos/embedded-hal-st/issues/102))
+
+### Features
+
+* Add data operations to GattClient ([#132](https://github.com/gabrielfrasantos/embedded-hal-st/issues/132)) ([a1eaaf5](https://github.com/gabrielfrasantos/embedded-hal-st/commit/a1eaaf53fe8cc032da7aec5a3937f5643c9f6590))
+* Add GATT Client (discovery attributes) ([#131](https://github.com/gabrielfrasantos/embedded-hal-st/issues/131)) ([121c351](https://github.com/gabrielfrasantos/embedded-hal-st/commit/121c35153e4e131fdab3cce5dd89723defe566e1))
+* Add parity to UartStmDma ([#56](https://github.com/gabrielfrasantos/embedded-hal-st/issues/56)) ([e30d8d9](https://github.com/gabrielfrasantos/embedded-hal-st/commit/e30d8d9749641edc20c822f283ced3a59b071fb7))
+* Add release-please workflow ([#65](https://github.com/gabrielfrasantos/embedded-hal-st/issues/65)) ([b39a848](https://github.com/gabrielfrasantos/embedded-hal-st/commit/b39a84822132e00b6d50dd059e16fa4f77e9394b))
+* Add stm32f7discoveryFmcPins to SdRamStm ([#78](https://github.com/gabrielfrasantos/embedded-hal-st/issues/78)) ([72df16b](https://github.com/gabrielfrasantos/embedded-hal-st/commit/72df16b5f9142af8e16073af0a9857f95965dfb2))
+* Add stm32g0 hal drivers ([#118](https://github.com/gabrielfrasantos/embedded-hal-st/issues/118)) ([35dff48](https://github.com/gabrielfrasantos/embedded-hal-st/commit/35dff48cb238a4b0250f90895945205a0446446c))
+* Apply clang-format ([#58](https://github.com/gabrielfrasantos/embedded-hal-st/issues/58)) ([714d922](https://github.com/gabrielfrasantos/embedded-hal-st/commit/714d922464168bf334b7616f620a02b93241e540))
+* Ble central pairing bonding feature ([#163](https://github.com/gabrielfrasantos/embedded-hal-st/issues/163)) ([530b3bc](https://github.com/gabrielfrasantos/embedded-hal-st/commit/530b3bca48b3710dc2ffe4956e451a78968bf330))
+* Deregister-interrupt-handler-on-move-assign ([#80](https://github.com/gabrielfrasantos/embedded-hal-st/issues/80)) ([095449d](https://github.com/gabrielfrasantos/embedded-hal-st/commit/095449da9208e5ea8118f3d506a2943284f9786c))
+* Gap and gatt refactored/improved due to embedded-infra changes ([#136](https://github.com/gabrielfrasantos/embedded-hal-st/issues/136)) ([e6c276b](https://github.com/gabrielfrasantos/embedded-hal-st/commit/e6c276b80075bf53d46ade0da89834712fd28e5d))
+* Improvements according to application note AN5289 ([#135](https://github.com/gabrielfrasantos/embedded-hal-st/issues/135)) ([bd95621](https://github.com/gabrielfrasantos/embedded-hal-st/commit/bd956214e617777edc51c248fbde589fa622c099))
+* Low power event dispatcher ([#156](https://github.com/gabrielfrasantos/embedded-hal-st/issues/156)) ([a0d1855](https://github.com/gabrielfrasantos/embedded-hal-st/commit/a0d18558fa99fc55f9386d9331856ab4eda730cc))
+* Merge upstream changes ([#126](https://github.com/gabrielfrasantos/embedded-hal-st/issues/126)) ([1546f51](https://github.com/gabrielfrasantos/embedded-hal-st/commit/1546f51e706884270073884bd53ec1fb197afe0a))
+* Merge upstream changes ([#79](https://github.com/gabrielfrasantos/embedded-hal-st/issues/79)) ([8ec3afd](https://github.com/gabrielfrasantos/embedded-hal-st/commit/8ec3afd8bfbdd640d2d0db4875a6e66ab98e0eba))
+* **osal:** Add example ([#82](https://github.com/gabrielfrasantos/embedded-hal-st/issues/82)) ([b1539ca](https://github.com/gabrielfrasantos/embedded-hal-st/commit/b1539cafb23ab99fe65f0fb403adbbad5f2debbe))
+* Removed additional EXCLUDE_FROM_ALL property in favour of using emil_build_for() ([8e3766d](https://github.com/gabrielfrasantos/embedded-hal-st/commit/8e3766d8829d0a53ef28d150e0f71bfd8236deb5))
+* Update st ble stack ([#165](https://github.com/gabrielfrasantos/embedded-hal-st/issues/165)) ([a6b8827](https://github.com/gabrielfrasantos/embedded-hal-st/commit/a6b8827ad55416a59817b8627785c98626d7aa37))
+* Update ST hal drivers ([#102](https://github.com/gabrielfrasantos/embedded-hal-st/issues/102)) ([6987d83](https://github.com/gabrielfrasantos/embedded-hal-st/commit/6987d83f4e9a78a5fc91b0e93d6788645cb6a49f))
+* Update the st ble stack to version 1.17 ([a6b8827](https://github.com/gabrielfrasantos/embedded-hal-st/commit/a6b8827ad55416a59817b8627785c98626d7aa37))
+
+
+### Bug Fixes
+
+* Adc on stm32wb ([#162](https://github.com/gabrielfrasantos/embedded-hal-st/issues/162)) ([ee16f2a](https://github.com/gabrielfrasantos/embedded-hal-st/commit/ee16f2a8bb31fedb475b92ab6529bf8b0132a40e))
+* Add ble middleware binaries ([#130](https://github.com/gabrielfrasantos/embedded-hal-st/issues/130)) ([201687e](https://github.com/gabrielfrasantos/embedded-hal-st/commit/201687ebdac32493630b76115ed068fd2261e863))
+* Add confirmation for gatt indication ([#159](https://github.com/gabrielfrasantos/embedded-hal-st/issues/159)) ([02a98f0](https://github.com/gabrielfrasantos/embedded-hal-st/commit/02a98f071ab9ad8a2663737e8703fa63e02f95c2))
+* Avoid using generator expressions for linking to targets ([#92](https://github.com/gabrielfrasantos/embedded-hal-st/issues/92)) ([441abe5](https://github.com/gabrielfrasantos/embedded-hal-st/commit/441abe5c58c0891f55f744a358b89a823e195b4b))
+* Communication over ethernet smi ([#129](https://github.com/gabrielfrasantos/embedded-hal-st/issues/129)) ([9935da5](https://github.com/gabrielfrasantos/embedded-hal-st/commit/9935da5cd5ad88318c0bf0ce8825669bd645892d))
+* Correct dependencies of synchronous_stm32fxxx and ble_middleware ([#85](https://github.com/gabrielfrasantos/embedded-hal-st/issues/85)) ([2ffaf23](https://github.com/gabrielfrasantos/embedded-hal-st/commit/2ffaf237fb9b1cb5db01802687b100065ed72af8))
+* Do not assert if GattCompleteEvent fails ([#167](https://github.com/gabrielfrasantos/embedded-hal-st/issues/167)) ([063daa4](https://github.com/gabrielfrasantos/embedded-hal-st/commit/063daa465045744438e0087dcc384fdaf035fa05))
+* Duplicate and misdirected function calls due to listening for events on multiple levels in the inheritance tree of classes using GapSt. ([6f8b7f7](https://github.com/gabrielfrasantos/embedded-hal-st/commit/6f8b7f7f7b2144c79e996fde904aee319b385210))
+* Event handling of GapSt and its derived classes. ([#143](https://github.com/gabrielfrasantos/embedded-hal-st/issues/143)) ([6f8b7f7](https://github.com/gabrielfrasantos/embedded-hal-st/commit/6f8b7f7f7b2144c79e996fde904aee319b385210))
+* Hal_st/stm32fxxx/EthernetSmiStm: ETH_MACMIIAR_CR_Msk is the mask of MACMII-&gt;AR, not the inverse ([9935da5](https://github.com/gabrielfrasantos/embedded-hal-st/commit/9935da5cd5ad88318c0bf0ce8825669bd645892d))
+* **hal_st/stm32fxxx/UartStm & UartDma:** Registers for stm32f407 ([#59](https://github.com/gabrielfrasantos/embedded-hal-st/issues/59)) ([98ceaf3](https://github.com/gabrielfrasantos/embedded-hal-st/commit/98ceaf33b855cd1021dee622b4e15e4c97693845))
+* HALST_EXCLUDE_FROM_ALL for instantiations_lwip ([#94](https://github.com/gabrielfrasantos/embedded-hal-st/issues/94)) ([f80f6ee](https://github.com/gabrielfrasantos/embedded-hal-st/commit/f80f6ee1d840534610f357777275030220bdd3bf))
+* Incorrect connection handle in state transitions ([#147](https://github.com/gabrielfrasantos/embedded-hal-st/issues/147)) ([2f99452](https://github.com/gabrielfrasantos/embedded-hal-st/commit/2f994526d59aff59fa80896122762b3a47c347e5))
+* Link stm32f0xx to correct std_periph ([#93](https://github.com/gabrielfrasantos/embedded-hal-st/issues/93)) ([31cdcbb](https://github.com/gabrielfrasantos/embedded-hal-st/commit/31cdcbb16a0132daba2647762128cb8f5df8de16))
+* Set correct mcpu mfpu options for different target cpus ([#75](https://github.com/gabrielfrasantos/embedded-hal-st/issues/75)) ([a799834](https://github.com/gabrielfrasantos/embedded-hal-st/commit/a799834fb8a167053297ba7a71e3f7beb5c048c1))
+* Set privacy mode for bonded devices ([#146](https://github.com/gabrielfrasantos/embedded-hal-st/issues/146)) ([88d30f2](https://github.com/gabrielfrasantos/embedded-hal-st/commit/88d30f288cf6c6cb47c10aec0003cabdc0f9d7e8))
+* Systick conflict with invalidIrq ([#161](https://github.com/gabrielfrasantos/embedded-hal-st/issues/161)) ([8ee04e1](https://github.com/gabrielfrasantos/embedded-hal-st/commit/8ee04e17e1c159c2d7e1e5057194dd0603e929ca))
+* **UartStm:** Use correct registers & fix overrun assert; enable FIFO ([#68](https://github.com/gabrielfrasantos/embedded-hal-st/issues/68)) ([60efc65](https://github.com/gabrielfrasantos/embedded-hal-st/commit/60efc6527afd5bd25b005bc5735ad4b399c9c21c))
+
 ## [2.0.0](https://github.com/philips-software/amp-hal-st/compare/v1.1.0...v2.0.0) (2023-04-14)
 
 
