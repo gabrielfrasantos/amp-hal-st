@@ -5,6 +5,7 @@
 #include "generated/stm32fxxx/PeripheralTable.hpp"
 #include "hal/interfaces/Ethernet.hpp"
 #include "hal_st/cortex/InterruptCortex.hpp"
+#include "infra/util/Optional.hpp"
 #include <array>
 
 #if defined(HAS_PERIPHERAL_ETHERNET)
@@ -18,10 +19,11 @@ namespace hal
         EthernetMacStm(EthernetSmi& ethernetSmi, LinkSpeed linkSpeed, MacAddress macAddress);
         ~EthernetMacStm();
 
-        virtual void SendBuffer(infra::ConstByteRange data, bool last) override;
-        virtual void RetryAllocation() override;
-        virtual void AddMacAddressFilter(MacAddress address) override;
-        virtual void RemoveMacAddressFilter(MacAddress address) override;
+        void Initialize() override;
+        void SendBuffer(infra::ConstByteRange data, bool last) override;
+        void RetryAllocation() override;
+        void AddMacAddressFilter(MacAddress address) override;
+        void RemoveMacAddressFilter(MacAddress address) override;
 
     private:
         void ResetDma();
@@ -73,8 +75,8 @@ namespace hal
         MacAddress macAddress;
         DispatchedInterruptHandler interrupt;
 
-        ReceiveDescriptors receiveDescriptors;
-        SendDescriptors sendDescriptors;
+        infra::Optional<ReceiveDescriptors> receiveDescriptors;
+        infra::Optional<SendDescriptors> sendDescriptors;
     };
 }
 

@@ -19,7 +19,7 @@ if (HALST_STANDALONE)
     FetchContent_Declare(
         emil
         GIT_REPOSITORY https://github.com/gabrielfrasantos/embedded-hal-st.git
-        GIT_TAG        eee8b34099fcbfdcd1ff906a217a14e524686a95 # Unreleased
+        GIT_TAG        20e28a98419020c64efc43ceae57fbf15df7065a # Unreleased
     )
 
     FetchContent_MakeAvailable(emil)

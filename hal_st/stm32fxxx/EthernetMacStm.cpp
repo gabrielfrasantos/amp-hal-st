@@ -13,8 +13,6 @@ namespace hal
               {
                   Interrupt();
               })
-        , receiveDescriptors(*this)
-        , sendDescriptors(*this)
     {
         peripheralEthernet[0]->MACA0LR = reinterpret_cast<const uint32_t*>(macAddress.data())[0];
         peripheralEthernet[0]->MACA0HR = reinterpret_cast<const uint32_t*>(macAddress.data())[1] & 0xffff;
@@ -31,6 +29,12 @@ namespace hal
     {
         ResetDma();
         peripheralEthernet[0]->MACCR = 0;
+    }
+
+    void EthernetMacStm::Initialize()
+    {
+        receiveDescriptors.Emplace(*this);
+        sendDescriptors.Emplace(*this);
     }
 
     void EthernetMacStm::SendBuffer(infra::ConstByteRange data, bool last)
