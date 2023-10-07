@@ -39,12 +39,12 @@ namespace hal
 
     void EthernetMacStm::SendBuffer(infra::ConstByteRange data, bool last)
     {
-        sendDescriptors.SendBuffer(data, last);
+        sendDescriptors->SendBuffer(data, last);
     }
 
     void EthernetMacStm::RetryAllocation()
     {
-        receiveDescriptors.RequestReceiveBuffers();
+        receiveDescriptors->RequestReceiveBuffers();
     }
 
     void EthernetMacStm::AddMacAddressFilter(MacAddress address)
@@ -118,14 +118,14 @@ namespace hal
             if ((peripheralEthernet[0]->DMASR & ETH_DMASR_TS) != 0)
             {
                 peripheralEthernet[0]->DMASR = ETH_DMASR_TS;
-                sendDescriptors.SentFrame();
+                sendDescriptors->SentFrame();
             }
 
             // Receive status
             if ((peripheralEthernet[0]->DMASR & ETH_DMASR_RS) != 0)
             {
                 peripheralEthernet[0]->DMASR = ETH_DMASR_RS;
-                receiveDescriptors.ReceivedFrame();
+                receiveDescriptors->ReceivedFrame();
             }
         }
 
